@@ -2,6 +2,8 @@
 @yield('scripts')
 <script type="text/javascript" src="{{asset('admin/js/jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('admin/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
 <script src="{{asset('admin/js/metisMenu.min.js')}}"></script>
 <script src="{{asset('admin/js/jquery.nanoscroller.min.js')}}"></script>
 <script src="{{asset('admin/js/jquery-jvectormap-1.2.2.min.js')}}"></script>

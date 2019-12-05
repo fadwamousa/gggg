@@ -44,12 +44,10 @@ class SlidersController extends Controller
                         'image'  => $imgName,
                         'alt'    => $alt
                     ]);
-
-
             }
         }
 
-        return redirect()->route('slider')->with('message','تم ادخال الصور بشكل سليم');
+        return redirect()->route('sliders.index')->with('message','تم ادخال الصور بشكل سليم');
 
 
 
@@ -61,6 +59,6 @@ class SlidersController extends Controller
 
         unlink(public_path().'/'.'images/'.$slider->image);
         $slider->delete();
-        return redirect()->route('slider')->with('message','تم المسح بشكل ناجح');
+        return redirect()->route('sliders.index')->with('message','تم المسح بشكل ناجح');
     }
 }

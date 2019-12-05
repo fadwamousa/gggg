@@ -23,8 +23,13 @@
     <link href="{{asset('admin/css/themify-icons.css')}}" rel="stylesheet">
     <link href="{{asset('admin/css/color.css')}}" rel="stylesheet">
     <link href="{{asset('admin/js/c3/c3.min.css')}}" rel="stylesheet">
+    <!--ده اللي اضفته-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-    @yield('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+
+
+@yield('styles')
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

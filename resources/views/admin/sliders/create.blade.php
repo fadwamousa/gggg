@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-9 gallery-col">
 
-                        <form  action="{{route('slider.store')}}"
+                        <form  action="{{route('sliders.store')}}"
                                method="POST"
                                enctype="multipart/form-data">
                             @csrf
@@ -54,7 +54,7 @@
 
                                     <div class="input-group-btn">
                                         <button class="btn btn-danger" type="button">
-                                            <i class="glyphicon glyphicon-remove"></i>Remove</button>
+                                            Remove</button>
                                     </div>
                                 </div>
                             </div>

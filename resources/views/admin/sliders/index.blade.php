@@ -52,7 +52,7 @@
                                                      class="img-responsive" width="150"></td>
                                             <td>
 
-                                                <form action="{{route('slider.delete',['id'=>$slider->id])}}" method="POST">
+                                                <form action="{{route('sliders.destroy',['id'=>$slider->id])}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
 

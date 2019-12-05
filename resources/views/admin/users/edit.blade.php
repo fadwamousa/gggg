@@ -38,7 +38,7 @@
                             <div class="panel-body">
                                 <p>التعديل علي المستخدم</p>
 
-                                    {!! Form::model($user,['method' => 'PATCH' , 'action' => ['AdminUsersController@update',$user->id] , 'class'=>'form-horizontal']) !!}
+                                    {!! Form::model($user,['method' => 'PATCH' , 'action' => ['admin\AdminUsersController@update',$user->id] , 'class'=>'form-horizontal']) !!}
                                     @csrf
                                     @method('PUT')
 

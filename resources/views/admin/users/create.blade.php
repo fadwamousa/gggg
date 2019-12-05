@@ -35,7 +35,7 @@
                             <div class="panel-body">
                                     <p>تسجيل الدخول </p>
 
-                                <form action="{{route('admin.store')}}" method="POST" class="form-horizontal">
+                                <form action="{{route('users.store')}}" method="POST" class="form-horizontal">
                                     @csrf
 
                                     <div class="form-group"><label class="col-lg-2 control-label">الاسم</label>
