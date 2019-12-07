@@ -11,7 +11,7 @@ class CreateWakfsTable extends Migration
     {
         Schema::create('wakfs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('heading');
             $table->text('body');
             $table->timestamps();

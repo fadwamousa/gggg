@@ -10,6 +10,6 @@ class Phone extends Model
     protected $fillable = ['phone_number','setting_id'];
 
     public function setting(){
-        return $this->belongsTo(Phone::class);
+        return $this->belongsTo(Setting::class);
     }
 }

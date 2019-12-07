@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReportsTable extends Migration
+class CreateMembershipCardsTable extends Migration
 {
 
     public function up()
     {
-        Schema::create('reports', function (Blueprint $table) {
+        Schema::create('membership_cards', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('attachment')->nullable();
@@ -17,9 +17,13 @@ class CreateReportsTable extends Migration
         });
     }
 
-
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropIfExists('reports');
+        Schema::dropIfExists('membership_cards');
     }
 }

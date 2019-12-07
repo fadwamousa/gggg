@@ -9,7 +9,20 @@
             </li>
 
            <li class="nav-heading"><span>Components</span></li>
-
+            <li>
+                <a href="#"><i class="fa fa-pencil"></i>
+                    <span class="nav-label">اعدادت الموقع</span><span class="fa fa-plus"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="{{route('setting.index')}}"> عرض اعدادت الموقع</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-pencil"></i>
+                    <span class="nav-label"> رسائل التواصل</span><span class="fa fa-plus"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="{{route('contacts.index')}}"> رسائل التواصل </a></li>
+                </ul>
+            </li>
 
             <li>
                 <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">سلايدر</span><span class="fa fa-plus"></span></a>
@@ -118,32 +131,13 @@
                     <li><a href="{{route('centers.index')}}">عرض المركز</a></li>
                     <li><a href="{{route('messages')}}">انشاء الرسالة الموجهة لكل أم</a></li>
                     <li><a href="{{route('works')}}">انشاء الاعمال التطوعية في المركز</a></li>
+                    <li><a href="{{route('kindergarten.index')}}"> برامج المركز</a></li>
+
                 </ul>
             </li>
 
 
-            <li>
-                <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span><span class="fa fa-plus"></span></a>
-                <ul class="nav nav-second-level collapse">
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="gallery.html">gallery</a></li>
-                </ul>
-            </li>
 
-            <li>
-                <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Menu Levels </span><span class="fa fa-plus"></span></a>
-                <ul class="nav nav-second-level collapse">
-                    <li>
-                        <a href="#">Third Level <span class="fa fa-plus"></span></a>
-                        <ul class="nav nav-third-level">
-                            <li>
-                                <a href="#">Third Level Item</a>
-                            </li>
-                        </ul>
-                    </li> <li><a href="#">Second Level Item</a></li>
-                </ul>
-            </li><li class="nav-heading"><span>Extra</span></li>
         </ul>
 
 

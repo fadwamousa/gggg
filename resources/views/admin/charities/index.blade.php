@@ -114,6 +114,53 @@
                         <div class="panel panel-card margin-b-30 ">
                             <!-- Start .panel -->
                             <div class="panel-heading">
+                                <h4 class="panel-title">جدول عرض تفاصيل انواع وقف الجمعية</h4>
+                                <a href="{{route('wakf.create')}}" class="btn btn-success">اضافة</a>
+
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th><span style="color:yellowgreen">العنوان</span></th>
+                                        <th><span style="color:yellowgreen">النص</span></th>
+                                        <th><span style="color:yellowgreen">الصورة</span></th>
+                                        <th><span style="color: yellowgreen">تحديث</span></th>
+                                        <th><span style="color: yellowgreen;">مسح</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($wakf as $w)
+                                        <tr>
+                                            <td>{{$w->id}}</td>
+                                            <td>{!! $w->heading !!}</td>
+                                            <td>{!! $w->body !!}</td>
+                                            <td><img src="{{asset('images/'.$w->image)}}" width="100" alt=""></td>
+                                            <td><a href="{{route('wakf.edit',$w->id)}}" class="btn btn-warning btn-sm">تحديث</a></td>
+                                            <td>
+                                                <form action="{{route('wakf.destroy',$w->id)}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <input type="submit" value="مسح" class="btn btn-danger btn-sm">
+
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div><!-- End .panel -->
+                    </div><!--end .col-->
+                    <div class="col-md-12">
+                        <div class="panel panel-card margin-b-30 ">
+                            <!-- Start .panel -->
+                            <div class="panel-heading">
                                 <h4 class="panel-title">اهداف الجمعية</h4>
                                 <a href="{{route('target.add')}}" class="btn btn-success">اضافة</a>
 

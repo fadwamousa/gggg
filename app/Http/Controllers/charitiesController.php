@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Wakf;
 use Illuminate\Http\Request;
 use App\models\Charity;
 use App\models\Details_chairty;
@@ -14,8 +15,9 @@ class charitiesController extends Controller
 
         $charities = Charity::all();
         $details   = Details_chairty::all();
+        $wakf = Wakf::all();
         $targets = Target::all();
-        return view('admin.charities.index',compact('charities','details','targets'));
+        return view('admin.charities.index',compact('charities','details','targets','wakf'));
 
     }
 

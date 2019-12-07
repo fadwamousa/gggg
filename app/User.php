@@ -23,7 +23,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-     
 
     public function role(){
         return $this->belongsTo(Role::class);
@@ -32,7 +31,11 @@ class User extends Authenticatable
     public function isAdmin(){
 
 
-    
+        /*if($this->role->name == 'admin' && $this->is_active == 1){
+            return true;
+        }
+        return false;*/
+
         if($this->role){
             if($this->role->name == 'admin' && $this->is_active ==1){
                 return true;
@@ -43,7 +46,4 @@ class User extends Authenticatable
         return false;
 
     }
-   
-
-   
 }

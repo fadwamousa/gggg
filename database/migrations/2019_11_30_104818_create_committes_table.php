@@ -13,7 +13,7 @@ class CreateCommittesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('image');
-            $table->string('attachment');//PDF
+            $table->string('attachment')->nullable();//PDF
             $table->timestamps();
         });
     }

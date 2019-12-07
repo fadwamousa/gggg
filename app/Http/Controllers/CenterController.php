@@ -53,7 +53,6 @@ class CenterController extends Controller
             $input = $request->all();
             if($request->file('image')){
                 $image = $request->file('image');
-                $image = $request->file('image');
                 $name=$image->getClientOriginalExtension();
                 $imgName= str_random(10).'tumbnail.'.$name;
                 $image->move(public_path().'/images/', $imgName);
