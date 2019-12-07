@@ -60,7 +60,7 @@
                                     <div class="form-group"><label class="col-lg-2 control-label">تاريخ التعين</label>
 
                                         <div class="col-lg-10">
-                                            <input type="date" name="date_hiring" value="{{$membership->date_hiring}}"  class="form-control">
+                                            <input type="text" name="date_hiring" class="form-control" id="hijri-date-input">
                                         </div>
                                     </div>
 
@@ -79,4 +79,11 @@
                 </div>
 
             </div><div style="clear:both;"></div> </div>
+@endsection
+@section('scripts')
+            <script type="text/javascript">
+                $(function () {
+                    $("#hijri-date-input").hijriDatePicker();
+                });
+            </script>
 @endsection

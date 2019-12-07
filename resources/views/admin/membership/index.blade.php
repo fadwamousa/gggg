@@ -54,7 +54,8 @@
                                             <td>{{$member->name}}</td>
                                             <td>{{$member->career_name}}</td>
                                             <td>
-                                                {{Hijrian::hijri($member->date_hiring)}}
+                                                {{$member->date_hiring}}
+                                                {{-- Hijrian::hijri($member->date_hiring) --}}
                                             </td>
                                             <td><a href="{{route('membership.edit',$member->id)}}"
                                                    class="btn btn-success btn-sm">تحديث</a></td>
