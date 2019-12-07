@@ -6,6 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::group(['prefix' => 'admin'],function(){
 
 
@@ -40,6 +41,26 @@ Route::group(['prefix' => 'admin'],function(){
 
         //TemplateController
         Route::resource('templates','TemplateController');
+
+        //Wakf
+        Route::resource('wakf','WakfController');
+
+        Route::resource('contacts','ContactController');
+
+        //Setting
+        Route::resource('setting','SettingController');
+        Route::get('setting/create/{id}','SettingController@create')->name('setting.create');
+        //phones for settings
+        Route::post('phone/setting/store','SettingController@phone_store')->name('phone.setting.store');
+
+
+        //kindergarten
+        Route::resource('kindergarten','kindergartenController');
+        Route::get('photoKind/{kind}','kindergartenController@add')->name('photoKind.add');
+        Route::post('photoKind/store','kindergartenController@store_photo')->name('photoKind.store');
+        Route::delete('photoKind/delete/{id}','kindergartenController@delete_photo')->name('photoKind.destroy');
+
+
 
         //Center
         Route::get('centers','CenterController@index')->name('centers.index');
